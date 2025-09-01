@@ -1,17 +1,16 @@
 ---
 name: In-Game Issue Report
 about: Report issue that happens in-game after a login screen
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
 ⚠️ **Issues that do not follow the guidelines below will be removed.** ⚠️
 
 ---
 
-> 💡  Most in-game issues are **game-specific** and not directly related to **XXMI Launcher** or the **XXMI DLL**. Such reports **will not be accepted here** and should be routed to Model Importer repositories instead. Model Importers are being maintained by different devs and they won't check this thread.
+> 💡 Most in-game issues are **game-specific** and not directly related to **XXMI Launcher** or the **XXMI DLL**. Such reports **will not be accepted here** and should be routed to Model Importer repositories instead. Model Importers are being maintained by different devs and they won't check this thread.
 
 ---
 
@@ -38,6 +37,9 @@ If your issue is confirmed to be Model Importer–related, please **report it to
 
 - **SRMI (Star Rail)**  
   https://github.com/SpectrumQT/SRMI-Package/issues
+
+- **HWMI (Horizon Walker)**  
+  https://github.com/WhytShadow/HWMI-Package/issues
 
 - **WWMI (Wuthering Waves)**  
   https://github.com/SpectrumQT/WWMI-Package/issues

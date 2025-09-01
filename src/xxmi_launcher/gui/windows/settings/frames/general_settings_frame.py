@@ -41,7 +41,7 @@ class GeneralSettingsFrame(UIScrollableFrame):
         self.put(ProcessOptionsFrame(self)).grid(row=2, column=1, padx=(0, 20), pady=(0, 30), sticky='w', columnspan=3)
 
         # Auto Config
-        if Vars.Launcher.active_importer.get() not in ['SRMI', 'HIMI']:
+        if Vars.Launcher.active_importer.get() not in ['SRMI', 'HIMI', 'HWMI']:
             self.put(AutoConfigLabel(self)).grid(row=3, column=0, padx=(20, 10), pady=(0, 30), sticky='w')
             self.put(AutoConfigFrame(self)).grid(row=3, column=1, padx=(0, 20), pady=(0, 30), sticky='w', columnspan=3)
 
@@ -242,6 +242,9 @@ class GameFolderEntry(UIEntry):
         if Config.Launcher.active_importer == 'HIMI':
             msg = 'Path to folder with "StarRail.exe".\n'
             msg += 'Usually this folder is named "Games" and located inside "DATA" folder of HSR installation folder.'
+        if Config.Launcher.active_importer == 'HWMI':
+            msg = 'Path to folder with "HorizonWalker.exe".\n'
+            msg += 'Usually this folder is named "Games" and located inside "DATA" folder of HW installation folder.'
         return msg.strip()
 
 
@@ -394,13 +397,13 @@ class LaunchOptionsButton(UIButton):
     def open_docs(self):
         if Config.Launcher.active_importer == 'WWMI':
             webbrowser.open('https://dev.epicgames.com/documentation/en-us/unreal-engine/command-line-arguments?application_version=4.27')
-        elif Config.Launcher.active_importer in ['GIMI', 'SRMI', 'ZZMI', 'HIMI']:
+        elif Config.Launcher.active_importer in ['GIMI', 'SRMI', 'ZZMI', 'HIMI', 'HWMI']:
             webbrowser.open('https://docs.unity3d.com/Manual/PlayerCommandLineArguments.html')
 
     def get_tooltip(self):
         if Config.Launcher.active_importer == 'WWMI':
             engine = 'UE4'
-        elif Config.Launcher.active_importer in ['GIMI', 'SRMI', 'ZZMI', 'HIMI']:
+        elif Config.Launcher.active_importer in ['GIMI', 'SRMI', 'ZZMI', 'HIMI', 'HWMI']:
             engine = 'Unity'
         else:
             raise ValueError(f'Game engine is unknown!')
@@ -769,6 +772,12 @@ class UnlockFPSCheckbox(UICheckbox):
             msg += '**Disabled**: Has no effect on FPS settings, use in-game settings to undo already forced 120 FPS.\n'
             msg += '**Warning!** Tweak is supported only for the Global HSR client and will not work for CN.\n'
             msg += '*Note: Edits `FPS` value in `HKEY_CURRENT_USER/SOFTWARE/Cognosphere/Star Rail/GraphicsSettings_Model_h2986158309`.*'
+        elif Config.Launcher.active_importer == 'HWMI':
+            msg = 'This option allows to set FPS limit to 120.\n'
+            msg += '**Enabled**: Updates Graphics Settings Windows Registry key with 120 FPS value on game start.\n'
+            msg += '**Disabled**: Has no effect on FPS settings, use in-game settings to undo already forced 120 FPS.\n'
+            msg += '**Warning!** Tweak is supported only for the Global HW client and will not work for CN.\n'
+            msg += '*Note: Edits `FPS` value in `HKEY_CURRENT_USER/SOFTWARE/Gentlemaniac/Horizon Walker/GraphicsSettings_Model_h2986158309`.*'
         elif Config.Launcher.active_importer == 'GIMI':
             msg = 'This option allows to set custom FPS limit.\n'
             msg += '**Warning!**: To minimize game engine glitches set FPS to 120 / 180 / 240 etc.\n'

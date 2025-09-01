@@ -1,4 +1,3 @@
-
 import customtkinter
 
 from typing import Union
@@ -13,6 +12,8 @@ from core.packages.model_importers import wwmi_package
 from core.packages.model_importers import zzmi_package
 from core.packages.model_importers import srmi_package
 from core.packages.model_importers import gimi_package
+from core.packages.model_importers import himi_package
+from core.packages.model_importers import hwmi_package
 
 
 @dataclass
@@ -178,4 +179,5 @@ Launcher: launcher_package.LauncherManagerConfig
 Packages: package_manager.PackageManagerConfig
 Importers: Config.ImportersConfig
 Active: Union[wwmi_package.WWMIPackageConfig, zzmi_package.ZZMIPackageConfig,
-              srmi_package.SRMIPackageConfig, gimi_package.GIMIPackageConfig]
+              srmi_package.SRMIPackageConfig, gimi_package.GIMIPackageConfig,
+              hwmi_package.HWMIPackageConfig]

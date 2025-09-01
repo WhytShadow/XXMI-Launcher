@@ -31,6 +31,7 @@ from core.packages.model_importers.srmi_package import SRMIPackage
 from core.packages.model_importers.wwmi_package import WWMIPackage
 from core.packages.model_importers.zzmi_package import ZZMIPackage
 from core.packages.model_importers.himi_package import HIMIPackage
+from core.packages.model_importers.hwmi_package import HWMIPackage
 
 
 @dataclass
@@ -266,6 +267,7 @@ class Application:
             WWMIPackage(),
             ZZMIPackage(),
             HIMIPackage(),
+            HWMIPackage(),
         ]
 
         self.package_manager = PackageManager(self.packages)

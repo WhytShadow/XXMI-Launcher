@@ -19,6 +19,7 @@ from core.packages.model_importers import srmi_package
 from core.packages.model_importers import wwmi_package
 from core.packages.model_importers import zzmi_package
 from core.packages.model_importers import himi_package
+from core.packages.model_importers import hwmi_package
 
 log = logging.getLogger(__name__)
 
@@ -30,6 +31,7 @@ class ImportersConfig:
     WWMI: wwmi_package.WWMIPackageConfig = field(default_factory=lambda: wwmi_package.WWMIPackageConfig())
     ZZMI: zzmi_package.ZZMIPackageConfig = field(default_factory=lambda: zzmi_package.ZZMIPackageConfig())
     HIMI: himi_package.HIMIPackageConfig = field(default_factory=lambda: himi_package.HIMIPackageConfig())
+    HWMI: hwmi_package.HWMIPackageConfig = field(default_factory=lambda: hwmi_package.HWMIPackageConfig())
 
 
 @dataclass
@@ -71,7 +73,7 @@ class AppConfig:
     @property
     def Active(self) -> Union[gimi_package.GIMIPackageConfig, srmi_package.SRMIPackageConfig,
                               zzmi_package.ZZMIPackageConfig, wwmi_package.WWMIPackageConfig,
-                              himi_package.HIMIPackageConfig]:
+                              himi_package.HIMIPackageConfig, hwmi_package.HWMIPackageConfig]:
         global Active
         return Active
 

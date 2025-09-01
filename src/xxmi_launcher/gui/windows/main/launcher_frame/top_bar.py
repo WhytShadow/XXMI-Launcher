@@ -108,6 +108,7 @@ class ImporterSelectButton(UIImageButton):
             'SRMI': f'Honkai: Star Rail Model Importer',
             'GIMI': f'Genshin Impact Model Importer',
             'HIMI': f'Honkai Impact Model Importer',
+            'HWMI': f'Horizon Walker Model Importer',
         }
         self.set_tooltip(tooltips[importer_id], delay=0.5)
 
@@ -210,6 +211,8 @@ class GameBananaButton(WebResourceButton):
             webbrowser.open('https://gamebanana.com/tools/10093'),
         elif Config.Launcher.active_importer == 'HIMI':
             webbrowser.open('https://gamebanana.com/tools/16498'),
+        elif Config.Launcher.active_importer == 'HWMI':
+            webbrowser.open('https://gamebanana.com/tools/17252'),  # Using WWMI link as placeholder
 
     def get_tooltip(self):
         return f'{Config.Launcher.active_importer} GameBanana'

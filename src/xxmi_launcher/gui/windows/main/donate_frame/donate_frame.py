@@ -148,6 +148,10 @@ class DonateFrame(UIFrame):
                     'Creators': ['SilentNightSound'],
                     'Maintainers': ['LeoTorrez', 'SinsOfSeven']
                 },
+                'HWMI': {
+                    'Creators': ['SilentNightSound'],
+                    'Maintainers': ['SinsOfSeven', 'LeoTorrez', 'Scyll', 'Gustav0']
+                },
             }
             platforms = {
                 'ko-fi': 'Ko-Fi',

@@ -3,8 +3,7 @@ name: Game Crash Report
 about: Help us with game crash investigation
 title: "[CRASH]"
 labels: 3dmigoto, bug, crash, launcher
-assignees: ''
-
+assignees: ""
 ---
 
 ⚠️ **Crash reports that do not follow the guidelines below will be removed.** ⚠️
@@ -38,10 +37,10 @@ Please follow the steps below carefully. After each step, **restart the game and
 5. **Remove all files from `GIMI\Mods`**  
    Ensures the crash isn’t caused by user mods.
 
-6. **Keep only `main.ini` in `GIMI\Core`**  (`WuWa-Model-Importer.ini` for WWMI)  
+6. **Keep only `main.ini` in `GIMI\Core`** (`WuWa-Model-Importer.ini` for WWMI)  
    Delete everything else from `GIMI\Core\GIMI` to rule out built-in shaders incompatibility.
 
-> ⚠️ Warning! Don't forget to run **Repair GIMI** again to restore `GIMI\Core` after Step #6.  
+> ⚠️ Warning! Don't forget to run **Repair GIMI** again to restore `GIMI\Core` after Step #6.
 
 > 📝 Note: GIMI used as example. For SRMI / WWMI / ZZMI process is the same.
 
@@ -59,7 +58,8 @@ Once you've found the cause (or still crashing) please proceed.
 > 💡 Most crashes are **game-specific** and not directly related to **XXMI Launcher** or the **XXMI DLL**. Such crash report **will not be accepted as XXMI Launcher issue**, please **report it to the correct Model Importer repository below**.
 
 ### **📄 Provide Logs**
-Please don't forget to include the **launcher log**  — it is essential for understanding your environment (OS, PC specs, versions, and launcher actions performed).
+
+Please don't forget to include the **launcher log** — it is essential for understanding your environment (OS, PC specs, versions, and launcher actions performed).
 
 - Upload your `XXMI Launcher Log.txt` from the launcher installation folder to [Pastebin](https://pastebin.com), and provide the link.
 
@@ -70,6 +70,9 @@ Please don't forget to include the **launcher log**  — it is essential for und
 
 - **SRMI (Star Rail)**  
   https://github.com/SpectrumQT/SRMI-Package/issues
+
+- **HWMI (Horizon Walker)**  
+  https://github.com/WhytShadow/HWMI-Package/issues
 
 - **WWMI (Wuthering Waves)**  
   https://github.com/SpectrumQT/WWMI-Package/issues
